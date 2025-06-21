@@ -25,7 +25,7 @@ public class StripeService {
 
     public StripeService() {
         // Initialize Stripe API key
-        Stripe.apiKey = "sk_test_51PuaxhP0Z87jNI1y6YOLl7MiOzrE05JiTVJNVpNAGu1bCa66qYqHX1zX3d41BANYH3FEYWG5EpvxvsqPrApnwk5b00RYSKr46T";
+        Stripe.apiKey = "stripe_api_key_here";
     }
 
     public JSONObject createCheckoutSession(long amount) throws StripeException {
