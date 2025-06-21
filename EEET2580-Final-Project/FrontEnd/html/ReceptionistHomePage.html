@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverSprite | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../resource/image/icons8-organic-food-48.png">
+    <link rel="stylesheet" href="../css/ReceptionistHomePage.css">
+    
+</head>
+<script src="../jscript/AuthCheckReceptionist.js" defer></script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="../resource/image/icons8-organic-food-48.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                HoverSprite
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ReceptionistHomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="SprayOrderReceptionist.html">Book For Farmer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ReceptionistListOfOrder.html">Spray Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ContactReceptionist.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="AboutUs.html">About Us</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle ms-3" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="profileDropdownMenu" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item profile-link" >Profile</a></li>
+                        <li><a class="dropdown-item" >Settings</a></li>
+                        <li><a class="dropdown-item view-link" data-bs-toggle="modal" data-bs-target="#roleSelectionModal">View</a></li>
+                        <li><a class="dropdown-item" id="viewFeedbackLink">View Feedback</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger logout-link" >Logout</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-light text-dark text-center p-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to HoverSprite</h1>
+            <p class="lead">Leading the way in organic agriculture with drone technology.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <a href="SprayOrderReceptionist.html" class="text-decoration-none">
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-shopping-cart fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">Book For Farmer</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <a href="ReceptionistListOfOrder.html" class="text-decoration-none">
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-history fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">Spray Orders</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <a href="ContactReceptionist.html" class="text-decoration-none">
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-envelope fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">Contact</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <a href="#" class="text-decoration-none profile-section-link">
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-user-circle fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">Profile</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Explore our wide range of services tailored for modern agriculture needs.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fa fa-leaf fa-3x mb-3"></i>
+                    <h4>Organic Spraying</h4>
+                    <p>Eco-friendly pesticide and fertilizer application to protect crops naturally.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-plane fa-3x mb-3"></i>
+                    <h4>Precision Farming</h4>
+                    <p>Utilizing drone technology for targeted crop treatment, maximizing efficiency.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-bar-chart fa-3x mb-3"></i>
+                    <h4>Data Analytics</h4>
+                    <p>Analyze crop health and field data to make informed agricultural decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-success text-white text-center py-3">
+        <p>&copy; 2024 HoverSprite. All rights reserved.</p>
+    </footer>
+    <div class="modal fade" id="roleSelectionModal" tabindex="-1" aria-labelledby="roleSelectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="roleSelectionModalLabel">View Profile</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <button id="viewSprayer" type="button" class="btn btn-outline-success mb-3" data-bs-toggle="modal" data-bs-target="#listModal">Sprayer</button>              
+                        <button id="viewFarmer" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#listModal">Farmer</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="listModalLabel">View Profile</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="listContent" class="d-flex flex-column">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feedback Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="feedbackModalLabel">Feedback List</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="feedbackContent" class="d-flex flex-column">
+                    <!-- Feedback items will be injected here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../jscript/ReceptionistHomePage.js"></script>
+</body>
+
+</html>

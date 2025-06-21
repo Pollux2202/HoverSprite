@@ -1,0 +1,17 @@
+SET UP:
+The code is using for backend is "Java" so it should have the JDK version 18 above in the setting up the coding environment.
+My SQL workbench configuration for database.
+In application.properties, change the password corresponding to the passwork that setting up in my sql.
+Setting up port "8081" which is using for our project.
+
+Installation:
+
+Install the coding environment such as "inteliJ" for code running.
+Install the Live Server extension to run the HTML files.
+Install the mySQL Workbench for database configuration.
+
+
+Usage:
+
+Run the Spring boot Server via IntelliJ or VS Code. But for the Front-end side, we would suggest running via the Live Server
+of VS Code

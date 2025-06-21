@@ -1,0 +1,252 @@
+.disguise_link{
+    color:black;
+}
+
+@media only screen and  (max-width: 321px){
+  .row{
+    transform: translate(0%, 10%) !important;
+    padding-bottom: 16% !important;
+  }
+  .SprayOrder-container {
+    width: 125% !important;
+   height: 163% !important;
+    transform: translate(-50%, -26%) !important;
+   
+  }
+}
+
+@media only screen and (max-width: 426px) and (min-width:377px) {
+
+  .response_device{
+    transform: translate(0%, 10%) !important;
+
+  }
+  .email_input{
+    width:100px !important;
+  }
+  .navigator{
+    transform: translate(0%, 130%) !important
+  }
+
+  .date_picker{
+    transform: translate(0%, 30%) !important;
+  }
+
+  body{
+    height: 100vh !important;
+  }
+  .SprayOrder-container {
+    width: 100% !important;
+   height: 181% !important;
+    transform: translate(-50%, -23%) !important;
+   
+  }
+  .row{
+    transform: translate(0%, 2%) !important;
+  }
+  .btn{
+    word-wrap: break-word;
+  }
+}
+
+@media only screen and (max-width: 769px) and (min-width:427px) {
+  .SprayOrder-container {
+    width: 100% !important;
+    height: 141% !important;
+    transform: translate(-50%, -30%) !important;
+  }
+  .total_text{
+    transform: translate(0%, -80%) !important;
+
+  }
+  .email_input{
+    width:221px !important;
+  }
+  .navigator{
+    transform: translate(0%, -5%) !important;
+
+
+  }
+  .areainput{
+    transform: translate(0%, -15%) !important;
+  }
+
+  .invalid-feedback{
+    transform: translate(0%, -5%) !important;
+
+  }
+
+  .button_navigate{
+    transform: translate(0%, -26%) !important;
+
+  }
+  .row{
+    transform: translate(0%, -10%) !important;
+  }
+  
+.step_container{
+  
+  transform: translate(0%, -35%) !important;
+}
+
+.padder{
+  padding-bottom: 5%;
+
+}
+
+body{
+  height: 151vh !important;
+}
+
+}
+
+
+h1,h2,h3,h4,h5,p,b,td,th,a, .dropdown_menu, .btn{
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+
+.SprayOrder-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:105%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -38%);
+  }
+  
+  body {
+  
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    height: 112vh;
+    background-image: url('../resource/image/pexels-timmossholder-974314.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+
+  #datepicker{width:180px;}
+  #datepicker > span:hover{cursor: pointer;}
+
+  .Unavailable{
+    color:red;
+ 
+  }
+
+  .Unavailable_Cell{
+    background-color: lightgrey !important;
+  }
+  .Available{
+    color: rgb(48, 132, 48);
+  }
+
+  .seperator{
+    padding-top:1%;
+    padding-bottom:1%;
+  }
+ 
+
+  
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+.button_navigate {
+  background-color: #527d75;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+.step_container {
+  text-align: center;
+  padding-bottom: 0.5%;
+}
+
+.button_seperator {
+  padding-right: 10px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav_bar_top{
+  background-color: #198754;
+  z-index: 1;
+ 
+}
+
+.email{
+  width: 40% ;
+}
+
+
+h1,h2,h3,h4,h5,p,b,td,th,a, .dropdown_menu, .btn{
+  font-family: 'Times New Roman', Times, serif;
+  
+}

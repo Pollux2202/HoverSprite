@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverSprite | Success Sprite Order</title>
+    <link rel="icon" type="image/x-icon" href="../resource/image/icons8-organic-food-48.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/Sprite_Success.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Load AuthCheck.js -->
+<script src="../jscript/AuthCheck.js" defer></script>
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light nav_bar_top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="../resource/image/icons8-organic-food-48.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                HoverSprite
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="FarmerHomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="SprayOrder.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="FarmerListOfOrder.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ContactReceptionist.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="AboutUs.html">About Us</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light ms-3 position-relative" type="button">
+                    <i class="fa fa-bell"></i>
+                    <span id="countNotification" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        +
+                    </span>
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle ms-3" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="profileDropdownMenu" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item profile-link" >Profile</a></li>
+                        <li><a class="dropdown-item" >Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger logout-link" >Logout</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Success-container">
+        <div class="thank-you_text text-center">
+            <h2> <b> Sprite payment went through successfully! </b></h2>
+            <h3>Thank you for your order</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon Success-icon" viewBox="0 0 1024 1024"
+                        version="1.1">
+                        <path
+                            d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0z m0 947.2c-240.64 0-435.2-194.56-435.2-435.2S271.36 76.8 512 76.8s435.2 194.56 435.2 435.2-194.56 435.2-435.2 435.2z m266.24-578.56c0 10.24-5.12 20.48-10.24 25.6l-286.72 286.72c-5.12 5.12-15.36 10.24-25.6 10.24s-20.48-5.12-25.6-10.24l-163.84-163.84c-15.36-5.12-20.48-15.36-20.48-25.6 0-20.48 15.36-40.96 40.96-40.96 10.24 5.12 20.48 10.24 25.6 15.36l138.24 138.24 261.12-261.12c5.12-5.12 15.36-10.24 25.6-10.24 20.48-5.12 40.96 15.36 40.96 35.84z"
+                            fill="#6BC839" />
+                    </svg>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button type="button" class="button_navigate" id="returnButton" onclick="returnHome()">Home
+                        Page</button>
+                </div>
+            </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+    </script>
+
+<script src="../jscript/Sprite_Success.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+</script>
+
+</html>

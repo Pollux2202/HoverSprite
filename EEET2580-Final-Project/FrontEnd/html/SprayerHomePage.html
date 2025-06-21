@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverSprite | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../resource/image/icons8-organic-food-48.png">
+</head>
+<!-- Load AuthCheck.js -->
+<script src="../jscript/AuthCheck.js" defer></script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="../resource/image/icons8-organic-food-48.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                HoverSprite
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="SprayerHomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="SprayerListOfOrder.html">History</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ContactReceptionist.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="AboutUs.html">About Us</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light ms-3 position-relative" type="button" data-bs-toggle="modal" data-bs-target="#notificationModal">
+                    <i class="fa fa-bell"></i>
+                    <span id="countNotification" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        23
+                    </span>
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle ms-3" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="profileDropdownMenu" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item profile-link" >Profile</a></li>
+                        <li><a class="dropdown-item" >Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger logout-link" >Logout</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-light text-dark text-center p-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to HoverSprite</h1>
+            <p class="lead">Leading the way in organic agriculture with drone technology.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+
+                    <a href="history.html" class="text-decoration-none">
+
+                    <a href="order.html" class="text-decoration-none">
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-shopping-cart fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">Order</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <a href="SprayerListOfOrder.html" class="text-decoration-none">
+
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-history fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">History</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+            <div class="col-md-6 mb-4">
+                    <a href="ContactReceptionist.html" class="text-decoration-none">
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-envelope fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">Contact</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6 mb-4">
+                    <a href="#" class="text-decoration-none profile-section-link">
+                        <div class="card text-center shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa fa-user-circle fa-3x text-success mb-3"></i>
+                                <h4 class="card-title text-dark">Profile</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Explore our wide range of services tailored for modern agriculture needs.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fa fa-leaf fa-3x mb-3"></i>
+                    <h4>Organic Spraying</h4>
+                    <p>Eco-friendly pesticide and fertilizer application to protect crops naturally.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-plane fa-3x mb-3"></i>
+                    <h4>Precision Farming</h4>
+                    <p>Utilizing drone technology for targeted crop treatment, maximizing efficiency.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-bar-chart fa-3x mb-3"></i>
+                    <h4>Data Analytics</h4>
+                    <p>Analyze crop health and field data to make informed agricultural decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-success text-white text-center py-3">
+        <p>&copy; 2024 HoverSprite. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../jscript/SprayerHomePage.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="notificationList" class="list-group">
+                        <!-- Notifications will be dynamically populated here -->
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+<div class="modal fade" id="newNotificationModal" tabindex="-1" aria-labelledby="newNotificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newNotificationModalTitle">Notification Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="newNotificationModalBody">Notification Body</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

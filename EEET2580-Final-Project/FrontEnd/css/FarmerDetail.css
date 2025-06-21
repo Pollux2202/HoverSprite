@@ -1,0 +1,114 @@
+h1,h2,h3,h4,h5,p,b,td,th,a, .dropdown_menu, .btn{
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+
+  .nav_bar_top{
+    background-color: #198754;
+    z-index: 1;
+   
+  }
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../resource/image/pexels-timmossholder-974314.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.profile-header {
+    background-color: #c3e6cb;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+.profile-header img {
+    border-radius: 50%;
+    width: 70px;
+}
+.profile-header h4 {
+    margin: 10px 0 5px;
+}
+.profile-header p {
+    color: gray;
+    margin: 0;
+}
+.profile-body {
+    padding: 20px;
+}
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+}
+.btn-copy {
+    float: right;
+    margin-left: 10px;
+}
+
+.accordion-button i {
+    margin-right: 10px;
+}
+.accordion-item:last-child .accordion-button.collapsed {
+    border-radius: 0;
+}
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    width: 30%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #f8f9fa;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #23272b;
+    color: #adb5bd;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

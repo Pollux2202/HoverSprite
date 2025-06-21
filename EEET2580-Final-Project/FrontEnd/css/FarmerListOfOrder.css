@@ -1,0 +1,68 @@
+h1,h2,h3,h4,h5,p,b,td,th,a, .dropdown_menu, .btn{
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+  body {
+  
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+
+  .nav_bar_top{
+    background-color: #198754;
+    z-index: 1;
+   
+  }
+
+  @media only screen and (max-width: 769px) and (min-width:427px) {
+    .button_container{
+    
+        transform: translate(0%, -600%) !important;
+      }
+
+  }
+
+  .nav_bar_text{
+    color:white;
+  }
+
+  h1,h2,h3,h4,h5,p,b,td,th,a, .dropdown_menu, .btn{
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+
+
+
+  .list_container{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   margin: auto;
+  }
+  
+  .title_list{
+    padding-bottom: 2%;
+  }
+
+  .search_bar{
+   margin: auto;
+    width:30% !important;
+  }
+  .search_bar_container{
+    padding-bottom: 2%;
+  }
+  
+  .pagina{
+    padding-top: 2%;
+    
+  }
+  
+  .pagina_text{
+    color:rgb(43, 138, 43);
+  }

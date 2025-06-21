@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverSprite | Signup Page</title>
+    <link rel="icon" type="image/x-icon" href="../resource/image/icons8-organic-food-48.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/Signup.css">
+</head>
+
+
+<body>
+    <div class="d-flex mr-auto half-screen">
+        <div class="signup-container container ">
+            <img src="../resource/image/icons8-organic-food-48.png" class="center-image">
+            <h2 class="text-center"><b>Sign Up</b></h2>
+            <form id="signupForm" class="responsive-form" onsubmit="submitForm(event)">
+                <label for="firstName" class="form-label"></label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name..." required />
+            
+                <label for="lastName" class="form-label"></label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name..." required />  
+            
+                <label for="email" class="form-label"></label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email..." required />  
+            
+                <label for="phone" class="form-label"></label>
+                <input type="tel" id="phone" class="form-control" name="phoneNumber" placeholder="Phone Number..." required />
+            
+                <label for="address" class="form-label"></label>
+                <input type="text" id="address" class="form-control" name="address" placeholder="Address..." required />
+            
+                <div class="password-container">
+                    <label for="password" class="form-label"></label>
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Password..." required />
+                </div>
+            
+                <div class="confirm-password-container">
+                    <label for="confirmPassword" class="form-label"> </label>
+                    <input type="password" id="confirmPassword" class="form-control" name="confirmPassword" placeholder="Confirm Password..." required />
+                </div>
+            
+                <div class="options">
+                    <a href="#" id="forgotPassword">Forgot password?</a>
+                </div>
+            
+                <button type="submit" class="signup-button">Sign Up</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="../jscript/Signup.js"></script>
+</body>
+
+</html>

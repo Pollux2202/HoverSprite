@@ -1,0 +1,13 @@
+h1,h2,h3,h4,h5,p,b,td,th,a, .dropdown_menu, .btn{
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+
+  .header{
+  background-color: aliceblue;
+  }
+
+  .text-color{
+    color:rgb(0, 0, 0)
+  }
+  

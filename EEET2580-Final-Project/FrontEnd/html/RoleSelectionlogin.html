@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverSprite | Select Role</title>
+
+    <link rel="icon" type="image/x-icon" href="../resource/image/icons8-organic-food-48.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/RoleSelectionLogin.css">
+</head>
+
+<body>
+    <div class="center-container">
+        <div class="role-container">
+            <img src="../resource/image/icons8-organic-food-48.png" class="center-image" alt="Logo">
+            <h2 class="text-center">Select Your Role</h2>
+
+            <div class="dropdown text-center">
+                <button class="btn btn-success dropdown-toggle" type="button" id="roleDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Choose Role
+                </button>
+                <div class="dropdown-menu" aria-labelledby="roleDropdown">
+                    <a class="dropdown-item" href="#" onclick="navigateToLogin('Farmer')">Farmer</a>
+                    <a class="dropdown-item" href="#" onclick="navigateToLogin('Receptionist')">Receptionist</a>
+                    <a class="dropdown-item" href="#" onclick="navigateToLogin('Sprayer')">Sprayer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="../jscript/RoleSelectionLogin.js"></script>
+</body>
+
+</html>

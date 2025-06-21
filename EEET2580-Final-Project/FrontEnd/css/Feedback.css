@@ -1,0 +1,318 @@
+@media only screen and (max-width: 769px) {
+    .feedback-container {
+      width: 100% !important;
+      height: 100% !important;
+      transform:translate(-50%,-40%) !important;
+    }
+
+    body{
+      height: 125vh !important;
+    }
+
+    .star-rating{
+      transform:translate(0%,11%) !important;
+    }
+    .step_container {
+      padding-bottom: 0% !important;
+    }
+
+    .responsive-form{
+      padding: 0% !important;
+    }
+  
+    
+    .button_spacer {
+      font-size: 70% !important;
+    }
+  
+    .navigator {
+      transform: translate(0, 50%);
+    }
+  
+    input[type=radio] {
+      transform: scale(1.8) !important;
+    }
+  
+    .form-control{
+      height: 10% !important;
+    }
+    
+    .instruction{
+      transform: translate(0, 51%)  !important;
+    }
+
+    .multichoice-container{
+      transform: translate(0, 28%) !important;
+    }
+
+    .text_field_input{
+      padding-bottom: 12% !important;
+    }
+    
+    .desc{
+      font-size: 22px;
+      transform: translate(0, 300%) !important;
+    }
+    
+  }
+  @media only screen and (max-width: 376px) {
+    
+    .desc{
+     font-size: 80%;
+     transform: translate(0, -76%);
+     
+    }
+    .multichoice-container{
+      transform: translate(0, -10%);
+    }
+  
+    .form-control{
+      height: 10% !important;
+    }
+  
+    .instruction{
+      transform: translate(0, 51%)  !important;
+    }
+  }
+  
+  h1,h2,h3,h4,h5,p,b,td,th,a{
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+  
+  .nav_bar_top{
+    background-color: #198754;
+    z-index: 1;
+   
+  }
+  
+  .instruction{
+    transform: translate(0, 300%);
+  }
+  input[type=radio] {
+    transform: scale(2);
+  }
+  
+  
+  .feedback-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    height:123% !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+  }
+  
+  body {
+  
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    height: 112vh;
+    background-image: url('../resource/image/pexels-timmossholder-974314.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .responsive-form {
+    padding: 15%;
+    text-align: center;
+  }
+  
+  .rating_attentive {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .rating_attentive input {
+    display: none;
+  }
+  
+  .rating_attentive label {
+    font-size: 48px;
+    cursor: pointer;
+  }
+  
+  .rating_attentive label:hover,
+  .rating_attentive label:hover~label {
+    color: orange;
+  }
+  
+  .rating_attentive input:checked~label {
+    color: orange;
+  }
+
+  /* ///////////////////////////////////////////////////*/
+  .rating_friend {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .rating_friend  input {
+    display: none;
+  }
+  
+  .rating_friend  label {
+    font-size: 48px;
+    cursor: pointer;
+  }
+  
+  .rating_friend  label:hover,
+  .rating_friend  label:hover~label {
+    color: orange;
+  }
+  
+  .rating_friend  input:checked~label {
+    color: orange;
+  }
+  /* ///////////////////////////////////////////////////*/
+  .rating_pro {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .rating_pro input {
+    display: none;
+  }
+  
+  .rating_pro  label {
+    font-size: 48px;
+    cursor: pointer;
+  }
+  
+  .rating_pro label:hover,
+  .rating_pro  label:hover~label {
+    color: orange;
+  }
+  
+  .rating_pro input:checked~label {
+    color: orange;
+  }
+    /* ///////////////////////////////////////////////////*/
+    .rating_satisfaction {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+    
+    .rating_satisfaction input {
+      display: none;
+    }
+    
+    .rating_satisfaction  label {
+      font-size: 48px;
+      cursor: pointer;
+    }
+    
+    .rating_satisfaction label:hover,
+    .rating_pro  label:hover~label {
+      color: orange;
+    }
+    
+    .rating_satisfaction input:checked~label {
+      color: orange;
+    }
+    /*//////////////////////////////////*/
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+  
+  .button_navigate {
+    background-color: #04AA6D;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  #prevBtn {
+    background-color: #bbbbbb;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+  
+  .step_container {
+    text-align: center;
+    padding-bottom: 4%;
+  }
+  
+  .button_seperator {
+    padding-right: 10px;
+  }
+  
+  .multi-choice_container {
+    height: 100%;
+    margin-bottom: auto;
+  }
+  
+  .button_spacer {
+    margin-left: 5%;
+    margin-bottom: 10%;
+    font-size: 100%;
+    text-align: center;
+  }
+  
+  .padding_radio {
+    padding: 10%;
+    margin: auto;
+  }
+
+  .star-rating{
+    transform:translate(0%,17%);
+  }
+
+  .satisfaction_sad{
+    font-size: 31px;
+    margin: auto;
+  }
+
+  .satisfaction_happy{
+    font-size: 46px;
+    margin: auto;
+  transform: translate(-15%,-7%);
+  }

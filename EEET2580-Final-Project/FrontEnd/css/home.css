@@ -1,0 +1,46 @@
+/* Styles for order history items */
+.order-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.order-details {
+    flex-grow: 1;
+}
+
+.order-actions {
+    margin-left: 20px;
+}
+
+/* Button styles */
+.btn {
+    cursor: pointer;
+}
+
+/* Custom button colors (you can adjust these to match your color scheme) */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Additional styles for status, if needed */
+.status {
+    font-weight: bold;
+}

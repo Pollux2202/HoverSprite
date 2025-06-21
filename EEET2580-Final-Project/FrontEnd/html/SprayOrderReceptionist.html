@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoverSprite | Book a Spray Order for farmer</title>
+    <link rel="icon" type="image/x-icon" href="../resource/image/icons8-organic-food-48.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/SprayOrderReceptionist.css">
+    <link rel="stylesheet" href="../css/Notification.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <!--<script src="../jscript/AuthCheck.js"></script>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Load AuthCheck.js -->
+<script src="../jscript/AuthCheck.js" defer></script>
+</head>
+
+
+<body onload="getSchedule()">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light nav_bar_top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="../resource/image/icons8-organic-food-48.png" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-text-top">
+                HoverSprite
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ReceptionistHomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="SprayOrderReceptionist.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ReceptionistListOfOrder.html">History</a>
+                    </li>
+                  
+                  
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ContactReceptionist.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="AboutUs.html">About Us</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light ms-3 position-relative" type="button">
+                    <i class="fa fa-bell"></i>
+                    <span id="countNotification"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        +
+                    </span>
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle ms-3" type="button" id="profileDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="profileDropdownMenu" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item profile-link">Profile</a></li>
+                        <li><a class="dropdown-item">Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger logout-link">Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="SprayOrder-container container">
+
+        <h1 class="text-center"> <b>Book a spray for farmer </b></h1>
+        <div class="tab">
+            <div class="container">
+                <h5> <b>Calendar Mode (Select One)</b> <i class="fa fa-question-circle" data-toggle="tooltip"
+                        data-placement="top"
+                        title="You can choose one of the calendars that best for your argiculture activities"></i>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-light">
+                            <input type="radio" name="calendar_options" id="Gregorian" onchange="getCalendarMode(this.value)" value="GREGORIAN">
+                            <h5>Gregorian</h5>
+                        </label>
+                        <label class="btn btn-dark">
+                            <input type="radio" name="calendar_options" id="Lunar"  onchange="getCalendarMode(this.value)"value="LUNAR">
+                            <h5>Lunar</h5>
+                        </label>
+                    </div>
+                </h5>
+
+                <div class="row">
+                    <div class="col-8 col-md-8">
+                        <div id="datepicker" class="input-group date date_picker" data-date-format="mm-dd-yyyy">
+                            <input class="form-control" type="text" readonly />
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-3">
+                        <div class="container was-validated">
+                            <form class="form-inline email">
+                                <label for="email" class="text-center">
+                                    <b>Farmer email</b> <i class="fa fa-question-circle" data-toggle="tooltip"
+                                        data-placement="top" title="Specify farmer's email here"></i>
+
+                                </label>
+                                <input type="text" required class="form-control email_input" id="farmerEmail"
+                                    oninput="getFarmerEmail()">
+                                <div class="invalid-feedback">Please fill out farmer's email</div>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="seperator"></div>
+                <div class=" table-responsive-md table-responsive-sm ">
+                    <table class="table response_table">
+                        <h5> <b>Session</b> <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top"
+                                title="Every day of the week, HoverSprite offers 12 spraying sessions at six 1-hour time slots. Each time slot has two bookable spraying sessions. "></i>
+                        </h5>
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Time / Session</th>
+                                <th scope="col">Session 1</th>
+                                <th scope="col">Session 2</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleBody">
+                            <tr>
+                                <th scope="row" class="table-warning">Morning</th>
+                                <th scope="row" class="table-warning"></th>
+                                <th scope="row" class="table-warning"></th>
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">4:00 to 5:00</th>
+
+                                <td class ="Unavailable_Cell"><span class="Unavailable"> (Unavailable)</span>
+                                </td>
+
+                                <td><a href="javascript:getTime(4,5,2)" id="myLink" class="disguise_link">
+                                        <span class="Available">(Available)</span></a>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <th scope="row">5:00 to 6:00</th>
+                                <td><a href="javascript:getTime(5,6,1)" id="myLink" class="disguise_link">
+                                        <span class="Available">(Available)</span></a>
+                                </td>
+                                <td class ="Unavailable_Cell"><span class="Unavailable"> (Unavailable)</span>
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">6:00 to 7:00</th>
+                                <td class ="Unavailable_Cell"><span class="Unavailable"> (Unavailable)</span>
+                                </td>
+
+                                <td><a href="javascript:getTime(6,7,2)" id="myLink" class="disguise_link">
+                                        <span class="Available">(Available)</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7:00 to 8:00</th>
+                                <td><a href="javascript:getTime(7,8,1)" id="myLink" class="disguise_link">
+                                        <span class="Available">(Available)</span></a>
+                                </td>
+                                <td class ="Unavailable_Cell"><span class="Unavailable"> (Unavailable)</span>
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-info">Afternoon</th>
+                                <th scope="row" class="table-info"></th>
+                                <th scope="row" class="table-info"></th>
+                            </tr>
+                            <tr>
+
+                                <th scope="row">16:00 to 17:00</th>
+                                <td class ="Unavailable_Cell"><span class="Unavailable"> (Unavailable)</span>
+                                </td>
+                                <td><a href="javascript:getTime(16,17,2)" id="myLink" class="disguise_link">
+                                        <span class="Available">(Available)</span></a>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">17:00 to 18:00</th>
+                                <td class ="Unavailable_Cell"><span class="Unavailable">(Unavailable)</span>
+                                </td>
+                                <td><a href="javascript:getTime(17,18,2)" id="myLink" class="disguise_link">
+                                        <span class="Available">(Available)</span></a>
+                                </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-3 ml-auto ">
+                        <div class="container text-center">
+
+                            <b>Type of Crop</b> <i class="fa fa-question-circle" data-toggle="tooltip"
+                                data-placement="top" title="You can choose the type of crop you want us to tend to"></i>
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    FRUIT
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <button class="dropdown-item" type="button"
+                                        onclick="changeItem(this)">FRUIT</button>
+                                    <button class="dropdown-item" type="button" onclick="changeItem(this)">CEREAL
+                                    </button>
+                                    <button class="dropdown-item" type="button"
+                                        onclick="changeItem(this)">VEGETABLE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 ml-auto ">
+
+                        <div class="container was-validated">
+                            <label for="area" class="text-center">
+                                <b>Farm area</b> <i class="fa fa-question-circle" data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="You can specify your farm area (in decares,  with 1 decare = 0.1 hectare = 1000m2)"></i>
+
+                            </label>
+                            <input type="number" required class="form-control areainput" id="area"
+                                oninput="getFarmArea()">
+                            <div class="invalid-feedback">Please fill out your area</div>
+
+                        </div>
+                    </div>
+                    <div class="col-3 ml-auto ">
+
+                        <div class="container was-validated">
+                            <label for="location" class="text-center">
+                                <b>Farm location</b> <i class="fa fa-question-circle" data-toggle="tooltip"
+                                    data-placement="top" title="You can specify your farm location"></i>
+
+                            </label>
+                            <input type="text" required class="form-control locationinput" id="location"
+                                oninput="getFarmLocation()">
+                            <div class="invalid-feedback">Please fill out your location</div>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-3 ml-auto ">
+                        <div class="container text-center">
+
+                            <b>Payment Type</b>
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    CASH
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <button class="dropdown-item" type="button"
+                                        onclick="changePayment(this)">CASH</button>
+                                    <button class="dropdown-item" type="button"
+                                        onclick="changePayment(this)">CARD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="tab">
+
+            <div class="container text-center">
+
+                <h5><b>Summary</b></h5>
+                <div class=" table-responsive-md table-responsive-sm  ">
+                    <table class="table table-striped table-sm">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p><b>Farmer's Email:</b></p>
+                                </td>
+                                <td>
+                                    <p id="farmerEmail_variable">asddassda</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p><b>Calendar Mode:</b></p>
+                                </td>
+                                <td>
+                                    <p id="calendar_variable">Gregorian</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p><b>Date - Time:</b></p>
+                                </td>
+                                <td>
+                                    <p id="dateTime_variable">dd/mm/yy - 4:00 to 5:00</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p><b>Session:</b></p>
+                                </td>
+                                <td>
+                                    <p  id="session_variable">2</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><b>Area:</b></p>
+                                </td>
+                                <td>
+                                    <p id="area_variable">100 decares</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><b>Type of crop:</b></p>
+                                </td>
+                                <td>
+                                    <p  id="crop_variable">Vegetable</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><b>Location:</b></p>
+                                </td>
+                                <td>
+                                    <p id ="location_variable">29 West Atlanta</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><b>Payment type:</b></p>
+                                </td>
+                                <td>
+                                    <p id ="payment_variable">Cash</p>
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                    <h4 class="padder" id ="total_variable">Total: 1,123,123 VND</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab">
+            <div class="container text-center" id="cash">
+                <h3> Thank you for your order</h3>
+                <h4> Since you have chose cash, please discuss it with the appointed sprayer</h4>
+            </div>
+
+            <!-- Display a payment form -->
+            <div id="checkout">
+                <!-- Checkout will insert the payment form here -->
+            </div>
+
+        </div>
+
+
+        <!-- Navigator -->
+        <div class="navigator">
+            <div class="step_container">
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="button-seperator">
+                    <button type="button" class="button_navigate" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" class="button_navigate" id="nextBtn" onclick="nextPrev(+1)">Next</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+    </script>
+
+<script src="../jscript/SprayOrderReceptionist.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+</script>
+
+</html>

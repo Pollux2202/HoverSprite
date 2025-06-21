@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HoverSprite | Login Page</title>
+
+    <link rel="icon" type="image/x-icon" href="../resource/image/icons8-organic-food-48.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/FarmerLogin.css">
+
+    
+</head>
+
+<body>
+    <div class="login-container">
+       
+        <img src="../resource/image/icons8-organic-food-48.png" class="center-image">
+        <h2 class="text-center"> <b>Hoversprite Login </b></h2>
+        <form>
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name here" required>
+
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group input-group-merge">
+
+                <input type="password" id="password" class="form-control" name="password"
+                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                    aria-describedby="password" required/>
+            </div>
+
+            <div class="options">
+                <a href="#" id="forgotPassword">Forgot password?</a>
+            </div>
+
+            <button type="button" class="login-button" id="signIn" onclick="login(event)">Login</button>
+
+
+            <div class="social-login">
+                <p>OR:</p>
+                <button type="button" class="social-button google-button" onclick="directToGmailLogin()">
+                    <img src="../resource/image/google.svg" alt="Google" class="google-logo">
+                    <span>Login with Google</span>
+                </button>
+                <button type="button" class="social-button facebook-button" onclick="directToFacebookLogin()">
+                    <img src="../resource/image/facebook.svg" alt="Google" class="facebook-logo" >
+                    <span>Login with Facebook</span>
+                </button>
+                <p class = "signup_text">Don't have an account? <a href="../html/Signup.html">Signup.</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="../jscript/FarmerLogin.js"></script>
+</body>
+
+</html>
