@@ -20,7 +20,7 @@ public class StripeWebHookController {
 
     @PostMapping("/stripe")
     public ResponseEntity<String> handleStripeWebhook(@RequestBody String payload, @RequestHeader("Stripe-Signature") String sigHeader) {
-        String endpointSecret = "whsec_M9rU9jsmnKsAa2cdKtiOBch1ZsYzsTqz";  // The secret from Stripe Dashboard
+        String endpointSecret = "webhook_secret_here";  // The secret from Stripe Dashboard
 
         try {
             // Verify the signature
